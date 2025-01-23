@@ -1,4 +1,4 @@
-# Flutter_Arduino_Bluetooth
+# Flutter+Arduino Communication with Bluetooth Low Energy (BLE)
 This tutorial guides you through establishing Bluetooth communication between an Arduino and iPhone/Android devices using Flutter.
 
 ## What is Flutter?
@@ -22,6 +22,10 @@ Git is a version control system that you’ll need installed.
   ```bash
   git --version
 
+### Visual Studio Code (VS-Code)
+
+- Download from the [official website](https://code.visualstudio.com/download).
+
 ### Android Studio (if developing for Android)
 
 1. Download and install Android Studio from the official website:  
@@ -30,11 +34,11 @@ Git is a version control system that you’ll need installed.
 2. Launch Android Studio and configure the SDK tools:
    - Navigate to **More Actions** → **SDK Manager**.
    - Go to the **SDK Tools** tab.
-     ![SDK Manager More Actions](https://github.com/user-attachments/assets/cbcfc6e7-f0ab-4438-898c-72957d576740)
+     - <img src="https://github.com/user-attachments/assets/cbcfc6e7-f0ab-4438-898c-72957d576740" alt="SDK Manager More Actions" width="500" />
    - Check the following options and install them:
      - **Android SDK Command-line Tools**
      - **Google USB Driver** (only required on Windows)
-     ![SDK Tools Tab](https://github.com/user-attachments/assets/029a5e31-9b9c-4b8e-9b43-301567bfb08f)
+     - <img src="https://github.com/user-attachments/assets/029a5e31-9b9c-4b8e-9b43-301567bfb08f" alt="SDK Tools Tab" width="500" />
 
 ### Xcode (if developing for iOS)
 
@@ -66,3 +70,30 @@ Git is a version control system that you’ll need installed.
 
    # Add CocoaPods to the PATH (you need to run this command each time you open a new terminal)
    export PATH=$HOME/.gem/bin:$PATH
+
+## Flutter SDK
+
+### **For Mac**
+1. **Download Flutter SDK**:  
+   - Get the latest Flutter SDK from the official Flutter documentation:  
+     [Download Flutter SDK](https://docs.flutter.dev/get-started/install/macos/desktop#install-the-flutter-sdk)
+
+2. **Unzip and Add to Path**:  
+   - Unzip the downloaded file into a directory of your choice.  
+     Here’s an example of unzipping it to the home directory (`~`):  
+     ```bash
+     unzip ~/Downloads/flutter_macos_arm64_3.27.1-stable.zip -d ~/
+     ```
+
+   - Add the Flutter SDK to your `PATH` environment variable:  
+     ```bash
+     export PATH=$HOME/flutter/bin:$PATH
+     ```
+
+   - **Note**:  
+     - You can unzip the Flutter SDK into any directory you prefer (the example above uses the home directory `~`).
+     - The `export` command needs to be run every time you open a new terminal. For a permanent solution, add the export command to your shell configuration file (e.g., `.bashrc`, `.zshrc`, or `.bash_profile`):
+       ```bash
+       echo 'export PATH=$HOME/flutter/bin:$PATH' >> ~/.zshrc
+       source ~/.zshrc
+       ```
