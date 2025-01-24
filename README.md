@@ -97,3 +97,39 @@ Git is a version control system that you’ll need installed.
        echo 'export PATH=$HOME/flutter/bin:$PATH' >> ~/.zshrc
        source ~/.zshrc
        ```
+3. **Verify Flutter and Xcode Setup**:  
+   - In the terminal, run the following command to ensure Flutter and Xcode are configured correctly:  
+     ```bash
+     flutter doctor
+     ```
+   - The output should confirm that Flutter and Xcode are properly set up.  
+     <img src="https://github.com/user-attachments/assets/daacf64d-0e22-45c9-b630-0963dfc15d89" alt="flutter doctor iOS" width="500" />
+     
+
+### **For Windows**
+
+1. **Install the Flutter Extension in VS Code**:  
+   - Open VS Code and install the Flutter extension from the Extensions Marketplace.  
+     <img width="468" alt="Flutter Extension" src="https://github.com/user-attachments/assets/658a7185-91aa-472a-b8d9-45dee62c09f3" />
+
+2. **Create a New Flutter Project**:  
+   - Open the Command Palette using `Ctrl+Shift+P` and search for `>Flutter: New Project`.  
+     <img width="292" alt="Flutter New Project" src="https://github.com/user-attachments/assets/aea7b097-9054-4330-9778-20abc20e00ce" />
+
+3. **Download Flutter SDK**:  
+   - If an error is displayed stating that the SDK was not found, choose the **Download** option.
+
+4. **Open the Terminal in VS Code**:  
+   - Navigate to **View → Terminal** in the VS Code menu.  
+     <img width="279" alt="Open Terminal" src="https://github.com/user-attachments/assets/f7337504-b476-456a-96a5-a73ccec9b7fe" />
+
+5. **Run `flutter doctor`**:  
+   - In the VS Code terminal, run the following command to check your Flutter installation:  
+     ```bash
+     flutter doctor
+     ```
+   - You should see an **OK** status for most items. Do not worry about warnings related to **Chrome** or **Visual Studio** checks, as they are not required.  
+     <img width="377" alt="Flutter Doctor Output" src="https://github.com/user-attachments/assets/3508469f-8d94-45ae-860d-23ee9e5c9ee1" />
+
+
+
