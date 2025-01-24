@@ -1,12 +1,34 @@
 # Flutter+Arduino Communication with Bluetooth Low Energy (BLE)
 This tutorial guides you through establishing Bluetooth communication between an Arduino and iPhone/Android devices using Flutter.
 
+---
+
+## Table of Contents
+1. [What is Flutter?](#what-is-flutter)
+2. [What to Expect in This Tutorial](#what-to-expect-in-this-tutorial)
+3. [Prerequisites](#prerequisites)
+   - [Git](#git)
+   - [Visual Studio Code](#visual-studio-code)
+   - [Android Studio (if developing for Android)](#android-studio-if-developing-for-android)
+   - [Xcode (if developing for iOS)](#xcode-if-developing-for-ios)
+   - [Flutter SDK](#flutter-sdk)
+     - [For Mac](#for-mac)
+     - [For Windows](#for-windows)
+   - [Apple Developer Account & Certificates (if developing for iOS)](#apple-developer-account--certificates-if-developing-for-ios)
+   - [Setting-up the Phone](#setting-up-the-phone)
+     - [Setting-up Android for Development](#setting-up-android-for-development)
+     - [Setting-up iPhone for Development](#setting-up-iphone-for-development)
+  
+---
+
 ## What is Flutter?
 Flutter is a powerful mobile development framework built by Google, based on the Dart programming language. It enables developers to create high-performance, cross-platform applications with a single codebase. With Flutter, you can develop apps for iOS, Android, and even web and desktop platforms like Chrome and Windows in certain cases.
 
 ### What to Expect in This Tutorial:
 - Instructions for the initial one-time setup required for Flutter development.
 - An example application to connect and communicate with an Arduino device.
+
+---
 
 ## Prerequisites
 Before you begin, you need to install some tools and perform some actions:
@@ -22,9 +44,11 @@ Git is a version control system that you’ll need installed.
   ```bash
   git --version
 
-### Visual Studio Code (VS-Code)
+### Visual Studio Code
 
 - Download from the [official website](https://code.visualstudio.com/download).
+
+---
 
 ### Android Studio (if developing for Android)
 
@@ -39,6 +63,8 @@ Git is a version control system that you’ll need installed.
      - **Android SDK Command-line Tools**
      - **Google USB Driver** (only required on Windows)
      - <img src="https://github.com/user-attachments/assets/029a5e31-9b9c-4b8e-9b43-301567bfb08f" alt="SDK Tools Tab" width="500" />
+
+---
 
 ### Xcode (if developing for iOS)
 
@@ -71,9 +97,11 @@ Git is a version control system that you’ll need installed.
    # Add CocoaPods to the PATH (you need to run this command each time you open a new terminal)
    export PATH=$HOME/.gem/bin:$PATH
 
-## Flutter SDK
+---
 
-### **For Mac**
+### Flutter SDK
+
+#### **For Mac**
 1. **Download Flutter SDK**:  
    - Get the latest Flutter SDK from the official Flutter documentation:  
      [Download Flutter SDK](https://docs.flutter.dev/get-started/install/macos/desktop#install-the-flutter-sdk)
@@ -105,8 +133,7 @@ Git is a version control system that you’ll need installed.
    - The output should confirm that Flutter and Xcode are properly set up.  
      <img src="https://github.com/user-attachments/assets/daacf64d-0e22-45c9-b630-0963dfc15d89" alt="flutter doctor iOS" width="500" />
      
-
-### **For Windows**
+#### **For Windows**
 
 1. **Install the Flutter Extension in VS Code**:  
    - Open VS Code and install the Flutter extension from the Extensions Marketplace.  
@@ -131,5 +158,63 @@ Git is a version control system that you’ll need installed.
    - You should see an **OK** status for most items. Do not worry about warnings related to **Chrome** or **Visual Studio** checks, as they are not required.  
      <img width="377" alt="Flutter Doctor Output" src="https://github.com/user-attachments/assets/3508469f-8d94-45ae-860d-23ee9e5c9ee1" />
 
+---
 
+### Apple Developer Account & Certificates (if developing for iOS)
 
+1. **Create an Apple Developer Account**:  
+   - Sign up or log in to your Apple Developer account:  
+     [Apple Developer](https://developer.apple.com/)
+
+2. **Create Certificates**:  
+   - Launch **Xcode**.  
+   - Select **Xcode → Preferences**.  
+   - In the Preferences window, click on **Accounts** in the toolbar.  
+   - Click the **+** button in the lower-left corner to add your Apple Developer account.  
+   - In the dialog that appears:
+     - Choose **Apple ID** and click **Continue**.
+     - Enter your Apple ID and password, then click **Next**.  
+       Your Apple Developer account will now appear in the list.
+   - Click **Manage Certificates**:
+     - A dialog appears showing any existing certificates (if any). If you're new, this list will be empty.
+     - Click the **+** button in the lower-left corner and choose **Apple Development** to create an Apple Development certificate.  
+       The certificate will appear in the list.
+     - Click the **+** button again and choose **Apple Distribution** to create an Apple Distribution certificate.  
+       The certificate will also appear in the list.
+   - Click **Done** to finish.
+
+3. **More Information**:  
+   For additional details, refer to the official documentation:  
+   [Installing Xcode and Apple Certificates](https://documentation.xojo.com/topics/application_deployment/apple_requirements/installing_xcode_and_apple_certificates.html)
+
+---
+
+### Setting-up the Phone
+
+#### Setting-up Android for Development
+
+To load and debug apps on an Android phone, you need to configure your device for development. Follow these steps:
+
+1. **Enable Developer Options and USB Debugging**:  
+   - Detailed instructions can be found here:  
+     [Enable Developer Options and USB Debugging](https://developer.android.com/studio/debug/dev-options)
+
+2. **Connect Your Device**:  
+   - Use a USB cable to connect your Android phone to your computer.  
+   - Ensure your phone is unlocked, and allow USB debugging when prompted.
+
+#### Setting-up iPhone for Development
+
+1. **Connect Your Device**:  
+   - Use a USB cable to connect your iPhone to your Mac.
+
+2. **Enable Developer Mode**:  
+   - Open **Xcode**, and in the top-left menu, navigate to:  
+     **Window → Devices & Simulators**  
+   - Select your connected device and enable **Developer Mode**.
+
+   Alternatively, you can enable Developer Mode directly on your iPhone:  
+   - Go to **Settings → Privacy & Security → Developer Mode**.
+
+3. **Restart Your iPhone**:  
+   - After enabling Developer Mode, restart your iPhone to ensure all settings are applied.
