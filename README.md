@@ -18,7 +18,7 @@ This tutorial guides you through establishing Bluetooth communication between an
    - [Setting-up the Phone](#setting-up-the-phone)
      - [Setting-up Android for Development](#setting-up-android-for-development)
      - [Setting-up iPhone for Development](#setting-up-iphone-for-development)
-  
+4. [Running Applications](#running-applications)
 ---
 
 ## What is Flutter?
@@ -218,3 +218,8 @@ To load and debug apps on an Android phone, you need to configure your device fo
 
 3. **Restart Your iPhone**:  
    - After enabling Developer Mode, restart your iPhone to ensure all settings are applied.
+
+---
+
+## Running Applications
+Coming up next...
