@@ -20,6 +20,7 @@ This tutorial guides you through establishing Bluetooth communication between an
      - [Setting-up iPhone for Development](#setting-up-iphone-for-development)
 4. [Running Applications](#running-applications)
    - [Simple Application](#running-a-simple-app)
+   - [BLE Application](#ble-application)
 ---
 
 ## What is Flutter?
@@ -300,7 +301,7 @@ This might take a few minutes, but afterwards you should be able to choose the p
     ```
 These files are also included in the repository for your reference.
 
-5. RUn the programs:
+5. Run the programs:
   - Run the Arduino sketch on your microcontroller and open the serial monitor.
   - Run the Flutter app on your phone.
   - You should be able to see and connect to the BLE-DEVICE from the app's dropdown menu.
