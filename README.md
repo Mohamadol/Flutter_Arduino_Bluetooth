@@ -222,6 +222,8 @@ To load and debug apps on an Android phone, you need to configure your device fo
 
 ## Running Applications
 
+---
+
 ### Running a Simple App
 
 Follow these steps to create and run a basic Flutter app:
@@ -254,4 +256,62 @@ This might take a few minutes, but afterwards you should be able to choose the p
 <p align="center">
   <img src="https://github.com/user-attachments/assets/466cfebd-cca6-42e4-a371-75e9985493fa" alt="simple app" width="200"/>
 </p>
- 
+
+---
+
+### BLE Application
+
+1. **Inspect the Arduino code**:  
+   The Arduino sketch is provided in **arduino_ble/arduino_ble.ino**. In the sketch, we name the device **“BLE-DEVICE”** and use specific UUIDs. These should match what we use in the Flutter code.
+
+   <p align="center">
+     <img src="https://github.com/user-attachments/assets/8982c07b-3b79-41c5-a7b2-cb17d743b1c0" alt="arduino code" width="700"/>
+   </p>
+
+2. **Create a new Flutter project**:  
+   Name it `arduino_flutter`, open it in VS Code, and replace the **lib/main.dart** file with the provided **flutter_ble/lib/main.dart**. Also, create a new file under the `lib` folder called `bluetooth_app.dart` and paste the content of the `flutter_ble/lib/bluetooth_app.dart` file from the repository.
+
+3. **Update `pubspec.yaml`**:  
+   Add the library we are going to use by including the `flutter_reactive_ble` dependency in the `pubspec.yaml`:
+
+   ```yaml
+   dependencies:
+     flutter:
+       sdk: flutter
+     flutter_reactive_ble: ^5.3.1 #add this line
+   ```
+4. **Permissions**:
+  To use services like Bluetooth, the app needs user permissions. Update the required files to request these permissions at runtime:
+  - **Android**: include these in the **android->app->src->main->AndroidManifest.xml**:
+
+    ```xml
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" android:usesPermissionFlags="neverForLocation" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission-sdk-23 android:name="android.permission.ACCESS_COARSE_LOCATION" android:maxSdkVersion="30" />
+    <uses-permission-sdk-23 android:name="android.permission.ACCESS_FINE_LOCATION" android:maxSdkVersion="30" />
+    ```
+  - **iOS**: include these in the **ios->Runner->Info.plist**
+
+    ```xml
+    <key>NSBluetoothAlwaysUsageDescription</key>
+    <string>The app uses Bluetooth to find your peripheral, connect to it and to exchange data.</string>
+    <key>NSBluetoothPeripheralUsageDescription</key>
+    <string>The app uses Bluetooth to find your peripheral, connect to it and to exchange data.</string>
+    ```
+These files are also included in the repository for your reference.
+
+5. RUn the programs:
+  - Run the Arduino sketch on your microcontroller and open the serial monitor.
+  - Run the Flutter app on your phone.
+  - You should be able to see and connect to the BLE-DEVICE from the app's dropdown menu.
+
+<table>
+  <tr>
+    <td>
+      <img width="500" alt="image" src="https://github.com/user-attachments/assets/3396547e-d1d6-4bd6-8fd9-0bd54c6416fe" />
+    </td>
+    <td style="padding-left: 20px;">
+      <img width="200" alt="image" src="https://github.com/user-attachments/assets/c275cd81-ded8-45cd-a2b4-87e963142da1" />
+    </td>
+  </tr>
+</table>
