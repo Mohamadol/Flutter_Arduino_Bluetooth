@@ -19,6 +19,7 @@ This tutorial guides you through establishing Bluetooth communication between an
      - [Setting-up Android for Development](#setting-up-android-for-development)
      - [Setting-up iPhone for Development](#setting-up-iphone-for-development)
 4. [Running Applications](#running-applications)
+   - [Simple Application](#running-a-simple-app)
 ---
 
 ## What is Flutter?
