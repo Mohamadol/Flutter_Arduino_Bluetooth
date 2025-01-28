@@ -219,7 +219,38 @@ To load and debug apps on an Android phone, you need to configure your device fo
 3. **Restart Your iPhone**:  
    - After enabling Developer Mode, restart your iPhone to ensure all settings are applied.
 
----
-
 ## Running Applications
-Coming up next...
+
+### Running a Simple App
+
+Follow these steps to create and run a basic Flutter app:
+
+#### **On macOS**:
+1. Open a terminal and execute the following commands:
+    ```bash
+    mkdir app_dir
+    cd app_dir
+    flutter create simple_app
+    cd simple_app
+    flutter run
+    ```
+
+#### **On Windows**:
+1. Open the Command Palette in Visual Studio Code with `Ctrl+Shift+P`.
+2. Run the command `>Flutter: New Project` and choose **Application**.
+3. Specify the location for your new app.
+4. Open PowerShell and navigate to your app's directory. For example, if you created your app in `Q:\app_dir\simple_app`, then in powershell you enter:
+    ```powershell
+    Set-Location "Q:\app_dir\simple_app"
+    ```
+5. Run the app:
+    ```bash
+    flutter run
+    ```
+
+This might take a few minutes, but afterwards you should be able to choose the phone that is connected to your computer and see an application that looks like this on your phone:
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/466cfebd-cca6-42e4-a371-75e9985493fa" alt="simple app" width="200"/>
+</p>
+ 
