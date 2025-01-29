@@ -258,6 +258,11 @@ This might take a few minutes, but afterwards you should be able to choose the p
   <img src="https://github.com/user-attachments/assets/466cfebd-cca6-42e4-a371-75e9985493fa" alt="simple app" width="200"/>
 </p>
 
+#### Useful Links
+- **[Signing and Certificates](https://stackoverflow.com/questions/74702643/problem-with-launching-build-app-on-iphone-via-xcode)** – Solving issues related to launching and building apps on iPhone via Xcode.
+- **[Signing and Certificates (Alternative)](https://stackoverflow.com/questions/72420093/signing-and-capabilities-tab-missing-in-xcode)** – Fixing missing "Signing & Capabilities" tab in Xcode.
+- **[General Flutter & iOS Guide](https://www.geeksforgeeks.org/how-to-install-flutter-app-on-ios/)** – A step-by-step guide on installing Flutter apps on iOS.
+
 ---
 
 ### BLE Application
