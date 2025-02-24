@@ -85,7 +85,7 @@ Git is a version control system that you’ll need installed.
    - Open a terminal and run the following setup commands:  
    - For detailed instructions, refer to the official Flutter documentation:  
      [Install and Configure Xcode](https://docs.flutter.dev/get-started/install/macos/desktop#install-and-configure-xcode)
-
+   
    ```bash
    # Set Xcode developer directory
    sudo sh -c 'xcode-select -s /Applications/Xcode.app/Contents/Developer && xcodebuild -runFirstLaunch'
@@ -98,6 +98,18 @@ Git is a version control system that you’ll need installed.
 
    # Add CocoaPods to the PATH (you need to run this command each time you open a new terminal)
    export PATH=$HOME/.gem/bin:$PATH
+   ```
+   - If you run into issues running CocoaPods, it could be because your Ruby version has not been updated.
+   ```bash
+   # Check your ruby version in your terminal
+   ruby -v 
+   ```
+   - You can update your Ruby by using RVM
+   ``` bash
+   # install and update ruby
+   \curl -sSL https://get.rvm.io | bash -s stable --ruby
+   ```
+   - Check your Ruby version again to ensure that it is properly installed and reattempt your CocoaPods installation
 
 ---
 
