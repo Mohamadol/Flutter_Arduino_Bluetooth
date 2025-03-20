@@ -35,10 +35,16 @@ class _MyHomePageState extends State<MyHomePage> {
   bool _isConnected = false; // flag to indicate connection
 
   // on initialization scan for devices
+  Timer? _scanTimer;
+
   @override
   void initState() {
     super.initState();
     _scanSub = _ble.scanForDevices(withServices: []).listen(_onScanUpdate);
+    _scanTimer = Timer.periodic(Duration(seconds: 5), (timer) {
+      _scanSub?.cancel();
+      _scanSub = _ble.scanForDevices(withServices: []).listen(_onScanUpdate);
+    });
   }
 
   // when terminating cancel all the subscriptions
